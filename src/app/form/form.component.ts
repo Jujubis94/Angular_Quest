@@ -1,6 +1,5 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Onomatopoeia } from '../models/onomotoepiaList.model';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -17,6 +16,9 @@ export class FormComponent implements OnInit {
   @Output() OnomatopiaToParent: EventEmitter<Onomatopoeia> = new EventEmitter(); 
   
   onSubmit() {
-    this.OnomatopiaToParent.emit(this.model);
+    const newOnomatopoeia = new Onomatopoeia(this.model.name);
+    this.OnomatopiaToParent.emit(newOnomatopoeia);
+    this.model.name = ''
   }
+  
 }
