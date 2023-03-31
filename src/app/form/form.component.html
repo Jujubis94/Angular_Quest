@@ -1,0 +1,21 @@
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+  <div>
+    Form submitted : {{ myForm.submitted }} Form valid : {{ myForm.valid }} Form
+    invalid : {{ myForm.invalid }}
+  </div>
+
+  <fieldset>
+    <label for="name-order">name</label>
+    <input
+      #name="ngModel"
+      id="name"
+      name="name"
+      type="texte"
+      [(ngModel)]="model.name"
+      required
+    />
+  </fieldset>
+
+  <button type="reset">Restaurer</button>
+  <button type="submit">Envoyer</button>
+</form>
