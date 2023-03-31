@@ -6,7 +6,5 @@
   <p>biographie : {{ developpeur.bio }}</p>
 </div>
 <app-skill *ngFor="let skill of developpeur.skills"
-  [name]="skill.name"
-  [logo]="skill.logo"
-  [site]="skill.site"
+  [skill]="skill"
 ></app-skill>

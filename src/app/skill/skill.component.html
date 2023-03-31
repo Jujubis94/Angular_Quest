@@ -1,4 +1,5 @@
-<p>nom d'entreprise : {{name}}</p>
+<p>nom d'entreprise : {{skill?.name}}</p>
 <p>logo :</p>
-<img [src]="logo" alt="logo web">
-<p>adresse du site web :{{site}}</p>
+<!-- skill && egal skill? -->
+<img [src]="skill && skill.logo" alt="logo web">
+<p>adresse du site web :{{skill?.site}}</p>
