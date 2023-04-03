@@ -1,0 +1,6 @@
+<div *ngFor="let c of list">
+  <p>Nom : {{ c.name }}</p>
+  <p>Prix : {{ c.price }} euros</p>
+  <p class="free" *ngIf="c.price === 0">Super c'est gratuit mais un mojito c'est meilleur</p>
+  <img [src]="c.image" [alt]="c.name" />
+</div>
