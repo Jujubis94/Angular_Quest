@@ -7,19 +7,17 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule } from '@angular/forms';
 import { CocktailListComponent } from './cocktailList/cocktailList.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
-      FormComponent,
-      ListComponent,
-      CocktailListComponent
-   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,FormsModule
+    FormComponent,
+    ListComponent,
+    CocktailListComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
