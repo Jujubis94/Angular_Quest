@@ -1,0 +1,9 @@
+div {
+    text-align: center;
+}
+
+p {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 50%;
+}

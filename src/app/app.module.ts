@@ -3,20 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { ListComponent } from './list/list.component';
 import { FormsModule } from '@angular/forms';
-import { CocktailListComponent } from './cocktailList/cocktailList.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NasaPageComponent } from './nasaPage/nasaPage.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormComponent,
-    ListComponent,
-    CocktailListComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
+  declarations: [AppComponent, NasaPageComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
